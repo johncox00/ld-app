@@ -2,6 +2,8 @@
 
 This is a stand-alone front-end application that demonstrates the functionality and value of LaunchDarkly's feature flags and experiments.
 
+![a screenshot of the app](screenshot.jpg)
+
 ## But first, a couple of notes...
 
 When you read the word "we" throughout this write-up, it's referring to a hypothetical team in a hypothetical ecom company to make the hypothetical scenario slightly more relatable. The code in the repo was written entirely by myself.
