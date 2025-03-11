@@ -128,7 +128,7 @@ If you want to run the automation for demonstrating experimentation (more on tha
 3. Unzip the package
 4. Open a terminal and run the driver: `$ ~/Downloads/geckodriver\ 2`
 
-Then you can `yarn test`.
+To run the automation, open up two terminals. In one run `yarn dev`. Then you can `yarn test` in the other terminal.
 
 ## Details
 
