@@ -56,7 +56,7 @@ If you're setting up this feature flag for yourself, here's the general represen
 
 We have a hunch that many Canadians will make more purchases if the site content is presented in French, so we created a feature flag called [Targeted](https://app.launchdarkly.com/projects/default/flags/targeted/targeting?env=test&selected-env=test) that targets Canadians as a segment. When a user is identified as Canadian, we have the option to toggle site content to French. Since this was a pretty big change for us with a user segment that we don't know much about, we decided to test our way into the functionality to see if it created any lift in sales. We created an associated experiment called [Canadians and French](https://app.launchdarkly.com/projects/default/experiments/canadians-and-french/results?env=test&selected-env=test). 
 
-My free account ran out of experimentation evens (as far as I can tell...2805/0) before the experiment reached statistical significance, but here's a quick shot of that that looked like when the errors started flowing in:
+My free account ran out of experimentation evens (as far as I can tell...2805/0) before the experiment reached statistical significance, but here's a quick shot of that what looked like when the errors started flowing in:
 
 ![experiment results](experiment.jpg)
 
