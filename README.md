@@ -8,7 +8,7 @@ The application is a mock ecommerce website with a few products displayed. There
 
 ### Blinking Title
 
-[Blinking Title](https://app.launchdarkly.com/projects/default/flags/blinking-title/targeting?env=test&selected-env=test) is a simple boolean feature flag targeted at all users. When targeting is turned on (serving `true`) the main title for the site will blink. Of course this might turn users away. We might see metrics moving in the wrong direction like slumping sales or elevated error rates (as savvy users of the site try to attack us to avenge such UX savagery). To limit the blast radius we installed an automated circuit breaker to turn targeting off and mitigate the pain. This can be simulated by clicking the button in the Control Panel labeled "Oh no! (rollback)".*
+[Blinking Title](https://app.launchdarkly.com/projects/default/flags/blinking-title/targeting?env=test&selected-env=test) is a simple boolean feature flag targeted at all users. When targeting is turned on (serving `true`) the main title for the site will blink. Of course this might turn users away. We* might see metrics moving in the wrong direction like slumping sales or elevated error rates (as savvy users of the site try to attack us to avenge such UX savagery). To limit the blast radius we installed an automated circuit breaker to turn targeting off and mitigate the pain. This can be simulated by clicking the button in the Control Panel labeled "Oh no! (rollback)".**
 
 If you're setting up this feature flag for yourself, here's the general representation:
 
@@ -28,7 +28,9 @@ If you're setting up this feature flag for yourself, here's the general represen
   ]
 ```
 
-_* To be clear, making REST API calls to LanchDarkly from client-side code is not advisable. This is strictly for demonstration purposes._
+_* When you read the word "we" throughout this write up, it's referring to a hypothetical team in a hypothetical ecom company to make the hypothetical scenario slightly more relatable. The code in the repo was written by only myself, though._
+
+_** To be clear, making REST API calls to LanchDarkly from client-side code is not advisable. This is strictly for demonstration purposes._
 
 ### Tester
 
