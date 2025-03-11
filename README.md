@@ -149,5 +149,5 @@ In order to gather enough data for the experiment demonstrated, I created a test
 
 When running the experiment the first time, I ran into an issue with sample ratio mismatch. This turned out to be an issue with the order of operations of identifying the user and evaluating the pertinent flag. I ended up changing a couple of things in the process:
 
-1. I made the default value for the `user` and `location` state values come directly from the query string.
-2. I added a state value called `initialId` that would delay rendering the application until the after the first `identify` call had completed.
+1. I made the default value for the `user` and `location` state values come directly from the query string rather than start as `null` and then being set by `useEffect`.
+2. I added a state value called `initialId` that would delay rendering the application until the after the first `identify` call has completed.
