@@ -144,7 +144,7 @@ You'll also need to set up a segment:
 
 ## How to Run This App
 
-This [React](https://react.dev/) application was created using [Vite](https://vite.dev/) and uses [Yarn](https://yarnpkg.com/) for dependency management (if you like). Once you cloned the repo, here's how to run it:
+This [React](https://react.dev/) application was created using [Vite](https://vite.dev/) and uses [Yarn](https://yarnpkg.com/) for dependency management (if you like). Once you've cloned the repo, here's how to run it:
 
 1. Install dependencies: `yarn install`.
 2. Create a `.env` file in which you will set two key environment variables: `VITE_LD_KEY` and `VITE_LD_TOKEN`. These are the client key and API key respectively. They are needed for this demo. The values are purposefully not in this repo. Please contact me for valid values.
