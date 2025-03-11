@@ -54,7 +54,7 @@ If you're setting up this feature flag for yourself, here's the general represen
 
 ## Targeted
 
-We have a hunch that many Canadians will make more purchases if the site content is presented in French, so we created a feature flag called [Targeted](https://app.launchdarkly.com/projects/default/flags/targeted/targeting?env=test&selected-env=test) that targets Canadians as a segment. When a user is identified as Canadian, we have the option to toggle site content to French. Since this was a pretty big change for us with a user segment that we don't know much about, we decided to test our way into the functionality to see if it created any lift in sales. We created an associated experiment called [Canadians and French](https://app.launchdarkly.com/projects/default/experiments/canadians-and-french/results?env=test&selected-env=test). 
+We have a hunch that many Canadians will make more purchases if the site content is presented in French, so we created a feature flag called [Targeted](https://app.launchdarkly.com/projects/default/flags/targeted/targeting?env=test&selected-env=test) that targets Canadians as a segment. When a user is identified as Canadian, we have the option to toggle site content to French. We then track purchases with a [metric](https://app.launchdarkly.com/projects/default/metrics/purchase-clicked/details?env=test&selected-env=test) triggered by the "Buy Now" button. Since this was a pretty big change for us with a user segment that we don't know much about, we decided to test our way into the functionality to see if it created any lift in sales. We created an associated experiment called [Canadians and French](https://app.launchdarkly.com/projects/default/experiments/canadians-and-french/results?env=test&selected-env=test). 
 
 My free account ran out of experimentation events (as far as I can tell...2805/0) before the experiment reached statistical significance, but here's a quick shot of what that looked like when the errors started flowing in:
 
@@ -140,6 +140,10 @@ The `FlagEvaluator` component does the bulk of the work. It takes two properties
 2. `flagValueMap`: This property is an object gives us the ability to associate whatever content we want to render with whatever flag value should show that content. The keys of this object should correspond to the potential values of the feature flag. If the flag is boolean, the map will have two keys, `true` and `false`. If it's a string-based feature flag, use the string values. The values of this object should be any render-able content or component.
 
 The `ErrorButton` and `PurchaseButton` components are instrumented to send events to LaunchDarkly. The `PurchaseButton` in particular sends events that are tied back to the experiment demonstration.
+
+_Wait...What about that `ErrorButton`?_
+
+This was plugged in as another way to observe events other than the afore-mentioned purchase event flowing into LaunchDarkly. The idea is that we could use this to explore things like automated rollbacks based on error thresholds. I didn't take it quite that far.
 
 **Experiment Automation**
 
