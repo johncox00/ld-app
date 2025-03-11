@@ -65,6 +65,32 @@ My free account ran out of experimentation events (as far as I can tell...2805/0
 If you're setting up this feature flag for yourself, here's the general representation:
 
 ```
+  "key": "tester",
+  "kind": "boolean",
+  "name": "Tester",
+  "tags": [],
+  "temporary": true,
+  "variations": [
+      {
+          "value": true
+      },
+      {
+          "value": false
+      }
+  ]
+```
+
+## Targeted
+
+We have a hunch that many Canadians will make more purchases if the site content is presented in French, so we created a feature flag called [Targeted](https://app.launchdarkly.com/projects/default/flags/targeted/targeting?env=test&selected-env=test) that targets Canadians as a segment. When a user is identified as Canadian, we have the option to toggle site content to French. We then track purchases with a [metric](https://app.launchdarkly.com/projects/default/metrics/purchase-clicked/details?env=test&selected-env=test) triggered by the "Buy Now" button. Since this was a pretty big change for us with a user segment that we don't know much about, we decided to test our way into the functionality to see if it created any lift in sales. We created an associated experiment called [Canadians and French](https://app.launchdarkly.com/projects/default/experiments/canadians-and-french/results?env=test&selected-env=test). 
+
+My free account ran out of experimentation events (as far as I can tell...2805/0) before the experiment reached statistical significance, but here's a quick shot of what that looked like when the errors started flowing in:
+
+![experiment results](experiment.jpg)
+
+If you're setting up this feature flag for yourself, here's the general representation:
+
+```
   "key": "targeted",
   "kind": "boolean",
   "name": "Targeted",
