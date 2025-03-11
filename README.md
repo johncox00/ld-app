@@ -28,7 +28,7 @@ If you're setting up this feature flag for yourself, here's the general represen
   ]
 ```
 
-_* When you read the word "we" throughout this write up, it's referring to a hypothetical team in a hypothetical ecom company to make the hypothetical scenario slightly more relatable. The code in the repo was written by only myself, though._
+_* When you read the word "we" throughout this write up, it's referring to a hypothetical team in a hypothetical ecom company to make the hypothetical scenario slightly more relatable. The code in the repo was written entirely by myself._
 
 _** To be clear, making REST API calls to LanchDarkly from client-side code is not advisable. This is strictly for demonstration purposes._
 
