@@ -34,7 +34,7 @@ _** To be clear, making REST API calls to LanchDarkly from client-side code is n
 
 ### Tester
 
-Being that April Fool's Day is coming up, the staff has decided that it would be great to play a little prank on the boss by putting a baby picture of him front and center on the website. This is a super secret mission that absolutely must work in production without anyone knowing about it. We set up a feature flag that only allows the user with ID `prodTester` (selectable in the demo's Control Panel) to see the feature in production. The feature flag's name is [Tester](https://app.launchdarkly.com/projects/default/flags/tester/targeting?env=test&selected-env=test).
+Being that April Fool's Day is coming up, the staff has decided that it would be great to play a little prank on the boss by putting a baby picture of him front and center on the website. This is a super secret mission that absolutely must work in production without anyone knowing about it before the big reveal. We set up a feature flag that only allows the user with ID `prodTester` (selectable in the demo's Control Panel) to see the feature in production. The feature flag's name is [Tester](https://app.launchdarkly.com/projects/default/flags/tester/targeting?env=test&selected-env=test).
 
 If you're setting up this feature flag for yourself, here's the general representation:
 
