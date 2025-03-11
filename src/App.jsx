@@ -76,7 +76,7 @@ function App() {
         {/* Floating Controls Panel */}
         <div className="feature-controls">
           <div className="feature-controls-header">
-            <h3>Controls</h3>
+            <h3>Control Panel</h3>
           </div>
           <div className="feature-controls-content row">
             <div className="col-xs-12 col-xl-4 col-lg-4 col-md-4">
